@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.CompleteFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/starting_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:text="Starting Value:"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/starting_value_edittext"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.5"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:padding="@dimen/_5sdp"
+            android:textAlignment="textStart"
+            android:layout_height="wrap_content"
+            android:background="#eeeeee"
+            android:text="0"
+            android:inputType="number"
+            android:textSize="@dimen/_20ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/starting_value"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/starting_value" />
+
+
+
+        <TextView
+            android:id="@+id/percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:text="Percentage:"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/starting_value" />
+
+        <TextView
+            android:id="@+id/toggle_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/secondry4"
+            android:padding="@dimen/_10sdp"
+            android:text="+"
+            android:textColor="@color/white"
+            android:textSize="60sp"
+            app:layout_constraintBottom_toBottomOf="@+id/difference"
+            app:layout_constraintStart_toStartOf="@+id/starting_value_edittext"
+            app:layout_constraintTop_toTopOf="@+id/percentage" />
+
+        <EditText
+            android:id="@+id/percentage_edittext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#eeeeee"
+            android:padding="@dimen/_5sdp"
+            android:text="0"
+            android:inputType="number"
+            android:textSize="@dimen/_20ssp"
+            app:layout_constraintStart_toEndOf="@+id/toggle_textview"
+            app:layout_constraintTop_toTopOf="@+id/toggle_textview"
+            app:layout_constraintWidth_percent="0.3" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="%"
+            android:textSize="20dp"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/percentage_edittext"
+            app:layout_constraintStart_toEndOf="@+id/percentage_edittext"
+            app:layout_constraintTop_toTopOf="@+id/percentage_edittext" />
+
+
+        <TextView
+            android:id="@+id/difference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:text="Difference:"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/percentage" />
+
+        <EditText
+            android:id="@+id/difference_edittext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#eeeeee"
+            android:padding="@dimen/_5sdp"
+            android:text="0"
+            android:editable="false"
+            android:textSize="@dimen/_20ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/toggle_textview"
+            app:layout_constraintStart_toEndOf="@+id/toggle_textview"
+            app:layout_constraintWidth_percent="0.39" />
+
+
+
+
+        <TextView
+            android:id="@+id/results"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:text="Results:"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/difference" />
+
+        <EditText
+            android:id="@+id/result_edittext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#eeeeee"
+            android:padding="@dimen/_5sdp"
+            android:text="0"
+            android:clickable="false"
+            android:textSize="@dimen/_20ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/results"
+            app:layout_constraintStart_toStartOf="@+id/starting_value_edittext"
+            app:layout_constraintTop_toTopOf="@+id/results"
+            app:layout_constraintWidth_percent="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

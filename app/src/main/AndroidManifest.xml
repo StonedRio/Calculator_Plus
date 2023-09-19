@@ -13,8 +13,21 @@
         android:theme="@style/Theme.CalculatorPlus"
         tools:targetApi="31">
         <activity
+            android:name=".FractionToPercentage"
+            android:exported="false" />
+        <activity
+            android:name=".PercentageIncreaseDecrease"
+            android:exported="false" />
+        <activity
+            android:name=".PriceCalculator"
+            android:exported="false" />
+        <activity
+            android:name=".DiscountCalculator"
+            android:exported="false" />
+
+        <activity
             android:name=".TipCalculator"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".PercentageCalculator"
             android:exported="false" />

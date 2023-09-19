@@ -120,12 +120,12 @@
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/cardview3"
+                android:id="@+id/discount_calculator"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:background="@drawable/round_bg"
                 android:backgroundTint="@color/secondry2"
-                app:layout_constraintBottom_toTopOf="@+id/cardview5"
+                app:layout_constraintBottom_toTopOf="@+id/percentage_increase_decrease"
                 app:layout_constraintHeight_percent="0.315"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/percentage_calculator"
@@ -162,12 +162,12 @@
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/cardview4"
+                android:id="@+id/price_calculator"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:background="@drawable/round_bg"
                 android:backgroundTint="@color/secondry3"
-                app:layout_constraintBottom_toTopOf="@+id/cardview6"
+                app:layout_constraintBottom_toTopOf="@+id/fraction_to_percentage"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHeight_percent="0.315"
                 app:layout_constraintTop_toBottomOf="@+id/tip_calculator"
@@ -204,7 +204,7 @@
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/cardview5"
+                android:id="@+id/percentage_increase_decrease"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:background="@drawable/round_bg"
@@ -243,7 +243,7 @@
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/cardview6"
+                android:id="@+id/fraction_to_percentage"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:background="@drawable/round_bg"

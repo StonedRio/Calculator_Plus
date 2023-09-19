@@ -4,256 +4,205 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#b56576"
-    tools:context=".TipCalculator">
+    android:background="#8375ee"
+    tools:context=".DiscountCalculator">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="2dp"
-        android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.25"
-        android:layout_marginTop="20dp"
-        android:background="@color/white"
+    <TextView
+        android:id="@+id/after"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="After"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:orientation="horizontal" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="250dp"
-        android:layout_height="2dp"
+        android:id="@+id/linearLayout5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
         android:background="@color/white"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintBottom_toBottomOf="@+id/after"
+        app:layout_constraintHeight_percent="0.001"
+        app:layout_constraintStart_toEndOf="@+id/after"
+        app:layout_constraintTop_toTopOf="@+id/after"
+        app:layout_constraintWidth_percent="0.15">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/after"
+        app:layout_constraintEnd_toStartOf="@+id/after"
+        app:layout_constraintHeight_percent="0.001"
+        app:layout_constraintTop_toTopOf="@+id/after"
+        app:layout_constraintWidth_percent="0.15">
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView_after"
+        android:layout_width="wrap_content"
+        android:maxWidth="@dimen/_200sdp"
+        android:maxLines="2"
+        android:layout_height="wrap_content"
+        android:text="00.00"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/after" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/yousave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Total Amount"
+        android:text="You Save"
         android:textColor="@color/white"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView1"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout2" />
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_after" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/yousave"
+        app:layout_constraintEnd_toStartOf="@+id/yousave"
+        app:layout_constraintHeight_percent="0.001"
+        app:layout_constraintTop_toTopOf="@+id/yousave"
+        app:layout_constraintWidth_percent="0.2">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/yousave"
+        app:layout_constraintHeight_percent="0.001"
+        app:layout_constraintStart_toEndOf="@+id/yousave"
+        app:layout_constraintTop_toTopOf="@+id/yousave"
+        app:layout_constraintWidth_percent="0.2">
+
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textview_you_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:text="Tip Amount"
+        android:maxWidth="@dimen/_200sdp"
+        android:maxLines="2"
+        android:text="00.00"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
-        app:layout_constraintHorizontal_bias="0.634"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yousave" />
 
     <TextView
-        android:id="@+id/total_amount_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxWidth="@dimen/_100sdp"
-        android:maxLines="1"
-        android:text=".0 $"
-        android:textColor="@color/white"
-        android:textSize="24dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tip_amount_textView"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/tip_amount_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxWidth="@dimen/_100sdp"
-        android:maxLines="1"
-        android:text=".0 $"
-        android:textColor="@color/white"
-        android:textSize="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-        app:layout_constraintEnd_toEndOf="@+id/textView1"
-        app:layout_constraintStart_toStartOf="@+id/textView1"
-        app:layout_constraintTop_toBottomOf="@+id/textView1" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:text="Tip Per Person"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-        app:layout_constraintEnd_toStartOf="@+id/linearLayout"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/total_amount_textView" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:text="Total Per Person"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout"
-        app:layout_constraintTop_toBottomOf="@+id/tip_amount_textView" />
-
-    <TextView
-        android:id="@+id/tip_per_person_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxWidth="@dimen/_100sdp"
-        android:maxLines="1"
-        android:text=".0 $"
-        android:textColor="@color/white"
-        android:textSize="24dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/total_per_person_textview"
-        app:layout_constraintEnd_toEndOf="@+id/textView4"
-        app:layout_constraintStart_toStartOf="@+id/textView4" />
-
-    <TextView
-        android:id="@+id/total_per_person_textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxWidth="@dimen/_100sdp"
-        android:maxLines="1"
-        android:text=".0 $"
-        android:textColor="@color/white"
-        android:textSize="24dp"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="@+id/textView5"
-        app:layout_constraintStart_toStartOf="@+id/textView5" />
-
-    <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/textView15"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="#33384b"
         android:paddingHorizontal="15dp"
-        android:text="#"
-        android:layout_marginTop="25dp"
+        android:text="%"
+        android:layout_marginTop="50dp"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="35dp"
         android:textStyle="bold"
         app:layout_constraintHeight_percent="0.06"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textview_you_save"
         app:layout_constraintWidth_percent="0.14" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textField"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:endIconDrawable="@drawable/ic_clear"
+        app:endIconDrawable="@drawable/baseline_clear_24"
         app:endIconMode="clear_text"
         app:hintEnabled="false"
-        app:layout_constraintBottom_toBottomOf="@+id/textView8"
+        app:layout_constraintBottom_toBottomOf="@+id/textView15"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.055"
-        app:layout_constraintStart_toEndOf="@+id/textView8"
-        app:layout_constraintTop_toTopOf="@+id/textView8">
+        app:layout_constraintStart_toEndOf="@+id/textView15"
+        app:layout_constraintTop_toTopOf="@+id/textView15">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/number_of_persons_edittext"
+            android:id="@+id/discount_edittext"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white"
             android:clickable="false"
-            android:hint="No of Person"
+            android:hint="Discount"
             android:paddingVertical="10dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/textView16"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="20dp"
         android:background="#33384b"
         android:paddingHorizontal="15dp"
-        android:text="%"
-        android:layout_marginTop="10dp"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="35dp"
-        android:textStyle="bold"
-        app:layout_constraintHeight_percent="0.06"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
-        app:layout_constraintWidth_percent="0.14" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textField1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:endIconDrawable="@drawable/ic_clear"
-        app:endIconMode="clear_text"
-        app:hintEnabled="false"
-        app:layout_constraintBottom_toBottomOf="@+id/textView9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.055"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toTopOf="@+id/textView9">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tip_percent_edittext"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/white"
-            android:clickable="false"
-            android:hint="Tip"
-            android:paddingVertical="10dp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="#33384b"
-        android:paddingHorizontal="15dp"
-        android:textStyle="bold"
         android:text="$"
-        android:layout_marginTop="10dp"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="35dp"
+        android:textStyle="bold"
         app:layout_constraintHeight_percent="0.06"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView15"
         app:layout_constraintWidth_percent="0.14" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textField2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:endIconDrawable="@drawable/ic_clear"
+        app:endIconDrawable="@drawable/baseline_clear_24"
         app:endIconMode="clear_text"
         app:hintEnabled="false"
-        app:layout_constraintBottom_toBottomOf="@+id/textView10"
+        app:layout_constraintBottom_toBottomOf="@+id/textView16"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.055"
-        app:layout_constraintStart_toEndOf="@+id/textView10"
-        app:layout_constraintTop_toTopOf="@+id/textView10">
+        app:layout_constraintStart_toEndOf="@+id/textView16"
+        app:layout_constraintTop_toTopOf="@+id/textView16">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/bill_edittext"
+            android:id="@+id/before_edittext"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white"
             android:clickable="false"
-            android:hint="Bil"
+            android:hint="Before"
             android:paddingVertical="10dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="#b56576"
+        android:background="#33384b"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.44"
@@ -265,7 +214,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="7"
-            android:background="@drawable/button_background"
+            android:background="@drawable/buttenshape"
             android:layout_margin="5dp"
             app:layout_constraintHeight_percent="0.23"
             app:layout_constraintStart_toStartOf="parent"
@@ -277,7 +226,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="8"
-            android:background="@drawable/button_background"
+            android:background="@drawable/buttenshape"
             android:layout_marginTop="5dp"
             app:layout_constraintEnd_toStartOf="@+id/button9"
             app:layout_constraintHeight_percent="0.23"
@@ -290,7 +239,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="9"
-            android:background="@drawable/button_background"
+            android:background="@drawable/buttenshape"
             android:layout_margin="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_percent="0.23"
@@ -298,11 +247,11 @@
             app:layout_constraintWidth_percent="0.32" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_dot"
+            android:id="@+id/buttonDot"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="."
-            android:background="@drawable/button_background"
+            android:background="@drawable/buttenshape"
             android:layout_margin="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHeight_percent="0.23"
@@ -311,18 +260,16 @@
             app:layout_constraintWidth_percent="0.32" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_clear"
+            android:id="@+id/button_delete"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_margin="5dp"
-            android:layout_marginEnd="4dp"
-            android:background="@drawable/button_background"
             android:text="X"
+            android:background="@drawable/buttenshape"
+            android:layout_margin="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_percent="0.23"
             app:layout_constraintTop_toBottomOf="@+id/button3"
-            app:layout_constraintVertical_bias="0.454"
             app:layout_constraintWidth_percent="0.32" />
 
         <com.google.android.material.button.MaterialButton
@@ -330,12 +277,12 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="0"
-            android:background="@drawable/button_background"
+            android:background="@drawable/buttenshape"
             android:layout_margin="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button_clear"
+            app:layout_constraintEnd_toStartOf="@+id/button_delete"
             app:layout_constraintHeight_percent="0.23"
-            app:layout_constraintStart_toEndOf="@+id/button_dot"
+            app:layout_constraintStart_toEndOf="@+id/buttonDot"
             app:layout_constraintTop_toBottomOf="@+id/button2"
             app:layout_constraintWidth_percent="0.32" />
 
@@ -344,7 +291,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="4"
-            android:background="@drawable/button_background"
+            android:background="@drawable/buttenshape"
             android:layout_margin="5dp"
             app:layout_constraintHeight_percent="0.23"
             app:layout_constraintStart_toStartOf="parent"
@@ -356,21 +303,23 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="5"
-            android:background="@drawable/button_background"
+            android:background="@drawable/buttenshape"
             android:layout_marginTop="5dp"
             app:layout_constraintEnd_toStartOf="@+id/button6"
             app:layout_constraintHeight_percent="0.23"
             app:layout_constraintStart_toEndOf="@+id/button4"
-            app:layout_constraintTop_toBottomOf="@+id/button9"
+            app:layout_constraintTop_toBottomOf="@+id/button8"
             app:layout_constraintWidth_percent="0.32" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button6"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text="6"
-            android:background="@drawable/button_background"
             android:layout_margin="5dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/buttenshape"
+            android:text="6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_percent="0.23"
             app:layout_constraintTop_toBottomOf="@+id/button9"
@@ -381,7 +330,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="3"
-            android:background="@drawable/button_background"
+            android:background="@drawable/buttenshape"
             android:layout_margin="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_percent="0.23"
@@ -393,7 +342,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="1"
-            android:background="@drawable/button_background"
+            android:background="@drawable/buttenshape"
             android:layout_margin="5dp"
             app:layout_constraintHeight_percent="0.23"
             app:layout_constraintStart_toStartOf="parent"
@@ -405,7 +354,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="2"
-            android:background="@drawable/button_background"
+            android:background="@drawable/buttenshape"
             android:layout_marginTop="5dp"
             app:layout_constraintEnd_toStartOf="@+id/button3"
             app:layout_constraintHeight_percent="0.23"
@@ -415,5 +364,7 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
